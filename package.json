@@ -6,7 +6,8 @@
     "start": "node ./server/main.js",
     "start-client": "ng serve",
     "build": "ng build & node ./scripts/postscript.js",
-    "build-prod": "ng build --configuration production & node ./scripts/postscript.js",
+    "build-prod": "ng build --configuration production",
+    "pre-deploy": "node ./scripts/postscript.js",
     "watch": "ng build --watch --configuration development & node ./scripts/postscript.js",
     "watch-prod": "ng build --watch --configuration production & node ./scripts/postscript.js",
     "test": "ng test"
