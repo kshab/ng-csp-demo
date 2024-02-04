@@ -17,7 +17,7 @@ const MIME_TYPES = {
   ico: 'image/x-icon',
   svg: 'image/svg+xml',
 };
-const STATIC_PATH = path.join(process.cwd(), '../dist/ng-csp/browser');
+const STATIC_PATH = path.join(process.cwd(), './dist/ng-csp/browser');
 
 const toBool = [() => true, () => false];
 
@@ -42,6 +42,7 @@ const prepareFile = async (url) => {
   }
   
   const filePath = path.join(...paths);
+  console.log({filePath});
   const pathTraversal = !filePath.startsWith(STATIC_PATH);
   const exists = await fs.promises.access(filePath).then(...toBool);
   const found = !pathTraversal && exists;

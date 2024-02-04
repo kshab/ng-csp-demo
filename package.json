@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-server": "node ./server/main.js",
     "build": "ng build & node ./scripts/postscript.js",
     "build-prod": "ng build --configuration production & node ./scripts/postscript.js",
     "watch": "ng build --watch --configuration development & node ./scripts/postscript.js",
