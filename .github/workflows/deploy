@@ -1,5 +1,4 @@
-name: CI
-
+name: Deploy App
 on:
   
   push:
